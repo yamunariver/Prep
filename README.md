@@ -7,3 +7,7 @@ What is a packet?
 All data sent over the Internet is broken down into smaller chunks called "packets."
 
 A packet has two parts: the header, which contains information about the packet itself, and the body, which is the actual data being sent.
+
+At the network layer, networking software attaches a header to each packet when the packet is sent out over the Internet, and on the other end, networking software can use the header to understand how to handle the packet.
+
+A header contains information about the content, source, and destination of each packet (somewhat like stamping an envelope with a destination and return address)
