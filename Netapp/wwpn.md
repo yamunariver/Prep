@@ -37,7 +37,7 @@ systool -c fc_host -v | grep port_name
 ```
 
 ---
-## *** Windows ***
+## ** Windows **
 ```
 Get-WmiObject -Namespace "root\WMI" -Class MSFC_FCAdapterHBAAttributes |
 ForEach-Object {
