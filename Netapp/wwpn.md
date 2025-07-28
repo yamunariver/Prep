@@ -37,6 +37,16 @@ systool -c fc_host -v | grep port_name
 ```
 
 ---
+## *** Windows ***
+```
+Get-WmiObject -Namespace "root\WMI" -Class MSFC_FCAdapterHBAAttributes |
+ForEach-Object {
+    $nodeWwn = ($_.NodeWWN | ForEach-Object { "{0:X2}" -f $_ }) -join ""
+    $portWwn = ($_.PortWWN | ForEach-Object { "{0:X2}" -f $_ }) -join ""
+    Write-Host "Node WWN: $nodeWwn"
+    Write-Host "Port WWN: $portWwn"
+}
+```
 
 ## ✅ **Windows**
 
